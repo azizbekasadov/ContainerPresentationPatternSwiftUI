@@ -11,7 +11,10 @@ import SwiftUI
 struct ContainerPresentationPatternSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                ContentView()
+            }
+            .environment(\.apiClientService, APIClientService())
         }
     }
 }
